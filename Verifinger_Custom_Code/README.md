@@ -15,3 +15,4 @@
 `utils.py` - Helper code for the `sub_verifinger.py` code
 
 `Verifinger SDK Test.ipynb` - Tests the `sub_verifinger.py`, custom Verifinger framework scripts, and generator networks (broken, since it is missing older versions of verifinger.py wrappers)
+
