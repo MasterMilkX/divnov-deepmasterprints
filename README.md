@@ -10,8 +10,8 @@ For using the code, many of the paths route to local code utils files and datase
 
 #### Print Archive
 `[BINARY USER CHROMOSOME]:[Z VECTOR REPRESENTATION]\n~~~\n`
-[BINARY USER CHROMOSOME] - which users were considered matched based on index (i.e. 01011 means users indexed at 1,3, and 4 matched the print)
-[Z VECTOR REPRESENTATION] - the vector that is passed to the generator model to recreate the print that made the match (size 100 vector)
+`[BINARY USER CHROMOSOME]` - which users were considered matched based on index (i.e. 01011 means users indexed at 1,3, and 4 matched the print)
+`[Z VECTOR REPRESENTATION]` - the vector that is passed to the generator model to recreate the print that made the match (size 100 vector)
 '~~~' - separates each entry of the archive
 
 EXAMPLE:
@@ -23,15 +23,15 @@ EXAMPLE:
 
 #### Coverage Report
 ```
-EXPERIMENT - the experiment type this was tested on [DeepMasterPrint, Random, Novelty, Diversity]
-DATASET - the dataset used
-FMR - the false match rate used in the experiment to matching users
-TTYPE - training, testing, or full dataset split
-CLASSIFIER - the matching classifier used for the experiment [Verifinger, MLC]
-COVERAGE - the percentage of user match coverages of the archives in each trial ordered from most to least coverage
+**EXPERIMENT** - the experiment type this was tested on [DeepMasterPrint, Random, Novelty, Diversity]
+**DATASET** - the dataset used
+**FMR** - the false match rate used in the experiment to matching users
+**TTYPE** - training, testing, or full dataset split
+**CLASSIFIER** - the matching classifier used for the experiment [Verifinger, MLC]
+**COVERAGE** - the percentage of user match coverages of the archives in each trial ordered from most to least coverage
 ```
 
-EXAMPLE:
+*EXAMPLE*:
 ```
 EXPERIMENT:DMP
 DATASET:CAPACITIVE
