@@ -1,18 +1,32 @@
 # DeepMasterPrint2
 
+![example pic](images/example.png)
 This repository contains the code for the paper _[Diversity and Novelty MasterPrints: Generating Multiple DeepMasterPrints for Increased User Coverage](https://arxiv.org/pdf/2209.04909.pdf)_
 
+
 ## Requirements
+Set up the environment (we use `python 3.7` for this codebase):
+```
+python -m pip install -r requirements.txt
+```
+
 For using the code, many of the paths route to local code utils files and datasets (i.e. the wrapper Verifinger code [`sub_verifinger.py`](Verifinger_Custom_Code/sub_verifinger.py)). Please remember to change these paths to match your own local path. 
 
+## Usage
+- For a print generator model, run [`Print_Autoencoder.ipynb`](Print_Autoencoder.ipynb)
+- For a matching model, run [`Print_Multiclassifier_Trainer.ipynb`](Print_Multiclassifier_Trainer.ipynb)
+- To run the experiements in the paper, run [`SP Experiment (PAPER).ipynb`](SP%20Experiment%20(PAPER).ipynb)
+- To run test experiments, run [`SP Exp - Test Dataset Coverage.ipynb`](SP%20Exp%20-%20Test%20Dataset%20Coverage.ipynb)
+- To visualize experiment results, run [`Show_Archive.ipynb`](Show_Archive.ipynb)
 
-### OUTPUT DESCRIPTION
 
-#### Print Archive
+## OUTPUT DESCRIPTION
+
+### Print Archive
 `[BINARY USER CHROMOSOME]:[Z VECTOR REPRESENTATION]\n~~~\n`
 `[BINARY USER CHROMOSOME]` - which users were considered matched based on index (i.e. 01011 means users indexed at 1,3, and 4 matched the print)
 `[Z VECTOR REPRESENTATION]` - the vector that is passed to the generator model to recreate the print that made the match (size 100 vector)
-'~~~' - separates each entry of the archive
+'~~~' - separates each archive
 
 EXAMPLE:
 ```
@@ -21,7 +35,7 @@ EXAMPLE:
 000000000000000...
 ```
 
-#### Coverage Report
+### Coverage Report
 ```
 **EXPERIMENT** - the experiment type this was tested on [DeepMasterPrint, Random, Novelty, Diversity]
 **DATASET** - the dataset used
@@ -42,7 +56,7 @@ COVERAGE:[0.005555555555555556, 0.005555555555555556, 0.002777777777777778, 0.00
 
 ```
 
-## Acknowledgements
+## Notes
 To run this code fully you must download the Verifinger framework software. Please see the _[README](Verifinger_Custom_Code/README.md)_ in the `Verifinger_Custom_Code` folder for more information.
 
 Kindly be informed that the dataset employed in this code repository is not included due to copyright and privacy restrictions. However, we have indicated the specific dataset used (CAPACITIVE, OPTICAL, NIST)(see our [previous work](https://arxiv.org/pdf/1705.07386.pdf) for detail), enabling you to source it from the designated provider. Please make sure to adhere to all copyright and usage regulations when obtaining and utilizing the dataset.
